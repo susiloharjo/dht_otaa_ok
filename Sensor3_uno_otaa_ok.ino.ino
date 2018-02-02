@@ -135,23 +135,7 @@ void do_send(osjob_t* j) {
   byte buffer[32];  
   float t = dht.readTemperature();
   float h = dht.readHumidity();
-  //float b = 4.8;
-//  while (isnan(t) || isnan(h)){   //check for valid data, else read again
-//    delay(5000);
-//    t = dht.readTemperature();  
-//    h = dht.readHumidity();
-//    Serial.println("DHT error");
-//    String message = "{Error DHT}";
-//    message.getBytes(buffer, message.length()+1);
-//  // Check if there is not a current TX/RX job running
-//  if (LMIC.opmode & OP_TXRXPEND) {
-//    Serial.println(F("OP_TXRXPEND, not sending"));
-//  } else {
-//    // Prepare upstream data transmission at the next possible time.
-//    LMIC_setTxData2(1, (uint8_t*) buffer, message.length() , 0);
-//    Serial.println("Sending: "+message);
-//  }
-//  }
+
 
 //read battery
   int sensorValue = analogRead(A0);
